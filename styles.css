@@ -1,0 +1,155 @@
+.circle-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #0d6efd;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.info-text {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.nav-links {
+  margin-top: 40px;
+}
+
+.nav-links a {
+  margin: 5px;
+}
+
+.btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Центральный текст */
+.central-text {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Изображения */
+.img-house1 {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.img-grill {
+  width: 150px;
+  transform: rotate(350deg);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  margin-top: -50px;
+  margin-left: 50px;
+}
+
+.images-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.central-section {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .central-text {
+    left: 0;
+    transform: none;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .images-container {
+    align-items: center;
+  }
+
+  .img-house1 {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 30px;
+  }
+
+  .img-grill {
+    width: 120px;
+    margin-left: 30px;
+  }
+}
+/* Голубой фон для продолжения страницы */
+.bg-lightblue {
+  background-color: #d0e7f9; /* Голубой цвет */
+}
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* styles.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.circle-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 50%;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+
+.info-text {
+  font-size: 14px;
+  color: #333;
+}
+
+.nav-links a {
+  margin: 5px;
+}
+
+.central-section {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  border-radius: 20px;
+}
+
+.bg-lightblue {
+  background-color: #e6f2ff;
+}
+
+.card img {
+  object-fit: cover;
+  height: 200px;
+}
+
+.card .btn {
+  width: 100%;
+}
+

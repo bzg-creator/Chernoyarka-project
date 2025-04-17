@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>База отдыха Черноярская Жемчужина</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .bg-lightblue {
+      background-color: #f0f9ff;
+    }
+    .circle-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #3b82f6;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    .nav-links .btn {
+      margin: 0.25rem;
+      transition: all 0.3s ease;
+    }
+    .nav-links .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    .central-section {
+      min-height: 500px;
+    }
+    .img-house1 {
+      max-width: 100%;
+      height: auto;
+      transform: translateX(50px);
+      z-index: 2;
+    }
+    .img-grill {
+      max-width: 80%;
+      height: auto;
+      transform: translate(-100px, -50px);
+      z-index: 1;
+    }
+    .carousel-item img {
+      max-height: 500px;
+      object-fit: cover;
+    }
+    .card {
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    @media (max-width: 768px) {
+      .central-section {
+        flex-direction: column-reverse;
+      }
+      .img-house1, .img-grill {
+        transform: none;
+        margin-bottom: 1rem;
+      }
+      .flex-row {
+        flex-direction: column;
+      }
+      .flex-row img {
+        width: 100% !important;
+        border-radius: 0.375rem 0.375rem 0 0 !important;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans bg-white">
+  <div class="container mx-auto px-4 py-8 md:py-12">
+    <!-- КРУГИ -->
+    <div class="flex flex-wrap justify-center gap-8 mb-12">
+      <div class="text-center w-full sm:w-1/2 md:w-1/3 px-4">
+        <div class="circle-icon">
+          <i class="bi bi-calendar-event"></i>
+        </div>
+        <div class="info-text text-gray-700">
+          <p class="font-medium">Будние дни с 9:00–19:00</p>
+          <p class="font-medium">Выходные с 9:00–20:00</p>
+        </div>
+      </div>
+      <div class="text-center w-full sm:w-1/2 md:w-1/3 px-4">
+        <div class="circle-icon">
+          <i class="bi bi-geo-alt"></i>
+        </div>
+        <div class="info-text text-gray-700 font-medium">Улица Бектуров</div>
+      </div>
+      <div class="text-center w-full sm:w-1/2 md:w-1/3 px-4">
+        <div class="circle-icon">
+          <i class="bi bi-telephone"></i>
+        </div>
+        <div class="info-text text-gray-700 font-medium">878342020342</div>
+      </div>
+    </div>
+
+    <!-- НАВИГАЦИЯ -->
+    <div class="flex flex-wrap justify-center mb-16 nav-links">
+      <a href="#" class="inline-flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-50 hover:text-blue-600 m-1">
+        Номера
+      </a>
+      <a href="#" class="inline-flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-50 hover:text-blue-600 m-1">
+        Номера во флигеле
+      </a>
+      <a href="#" class="inline-flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-50 hover:text-blue-600 m-1">
+        Гриль и мангал
+      </a>
+      <a href="#" class="inline-flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-50 hover:text-blue-600 m-1">
+        Спорт площадки
+      </a>
+      <a href="#" class="inline-flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-50 hover:text-blue-600 m-1">
+        Доп Услуги
+      </a>
+      <a href="#" class="inline-flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-50 hover:text-blue-600 m-1">
+        Баня
+      </a>
+    </div>
+
+    <!-- ЦЕНТРАЛЬНЫЙ КОНТЕНТ -->
+    <div class="flex flex-col md:flex-row items-center mb-20 central-section">
+      <div class="w-full md:w-1/2 text-center md:text-left mb-10 md:mb-0 px-4">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">База Отдыха</h1>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">в городе Павлодар</h1>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-600 mb-6">Черноярская Жемчужина</h1>
+        <p class="text-lg text-gray-600 mb-8">Забронируйте номер под вашу компанию и<br>проведите отличное время в нашей базе отдыха</p>
+        <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+          <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
+            Забронировать
+          </a>
+          <a href="#" class="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
+            Посмотреть цены
+          </a>
+        </div>
+      </div>
+      
+      <div class="w-full md:w-1/2 relative px-4">
+        <div class="images-container">
+          <img src="https://via.placeholder.com/500x300?text=Домики" alt="Домики" class="img-house1">
+          <img src="https://via.placeholder.com/400x250?text=Мангалы" alt="Мангалы" class="img-grill">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- НОВЫЙ БЛОК С ТЕКСТОМ И КАРУСЕЛЬЮ -->
+  <div class="bg-lightblue py-12 px-4">
+    <div class="container mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800">Идеальное место для отдыха на природе</h2>
+      </div>
+
+      <!-- КАРУСЕЛЬ -->
+      <div class="relative overflow-hidden rounded-xl shadow-xl mb-12">
+        <div class="carousel-inner relative w-full overflow-hidden">
+          <div class="carousel-item active relative float-left w-full">
+            <img src="https://via.placeholder.com/1200x500?text=Фото+1" class="block w-full" alt="Фото 1">
+          </div>
+        </div>
+        <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 text-gray-800 rounded-full w-10 h-10 flex items-center justify-center">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 text-gray-800 rounded-full w-10 h-10 flex items-center justify-center">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- НОВАЯ СЕКЦИЯ: ПРОЖИВАНИЕ И ОТДЫХ СЛЕВА -->
+  <div class="container mx-auto px-4 py-12">
+    <div class="flex flex-col lg:flex-row gap-8">
+      <div class="w-full lg:w-1/3">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8">Проживание и отдых</h2>
+
+        <!-- КАРТОЧКА: ДНЕВНОЙ ОТДЫХ -->
+        <div class="card bg-white rounded-xl overflow-hidden mb-8">
+          <img src="https://via.placeholder.com/400x250?text=Дневной+отдых" class="w-full h-48 object-cover" alt="Дневной отдых">
+          <div class="p-6">
+            <h5 class="text-xl font-bold text-gray-800 mb-2">Дневной отдых</h5>
+            <p class="text-gray-600 mb-1"><i class="bi bi-clock mr-2"></i>10:00–18:00</p>
+            <p class="text-gray-600 mb-1"><i class="bi bi-check-circle mr-2"></i>Доступ на территорию базы отдыха</p>
+            <p class="text-gray-600 mb-1"><i class="bi bi-currency-exchange mr-2"></i>2 500 тг</p>
+            <p class="text-gray-600 mb-4"><i class="bi bi-clock-history mr-2"></i>После 18:00 +500 тг в час</p>
+            <a href="#" class="inline-flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-50">
+              <i class="bi bi-bell mr-2"></i> Забронировать
+            </a>
+          </div>
+        </div>
+
+        <!-- КАРТОЧКА: ПРОЖИВАНИЕ В НОМЕРЕ -->
+        <div class="card bg-white rounded-xl overflow-hidden">
+          <img src="https://via.placeholder.com/400x250?text=Проживание+в+номере" class="w-full h-48 object-cover" alt="Проживание в номере">
+          <div class="p-6">
+            <h5 class="text-xl font-bold text-gray-800 mb-2">Проживание в номере</h5>
+            <p class="text-gray-600 mb-1"><i class="bi bi-clock mr-2"></i>24 часа</p>
+            <p class="text-gray-600 mb-1"><i class="bi bi-house-door mr-2"></i>Стандарт — 7 000 тг</p>
+            <p class="text-gray-600 mb-4"><i class="bi bi-house mr-2"></i>Люкс — 8 000 тг</p>
+            <a href="#" class="inline-flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-50">
+              <i class="bi bi-bell mr-2"></i> Забронировать
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full lg:w-2/3">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Путевка на 1 день</h2>
+
+        <!-- КАРТОЧКА 1 -->
+        <div class="card bg-white rounded-xl overflow-hidden mb-8 flex flex-col md:flex-row">
+          <div class="w-full md:w-2/3 p-6">
+            <h5 class="text-xl font-bold text-gray-800 mb-2">Стандартный номер + питание</h5>
+            <p class="text-gray-600 mb-1"><i class="bi bi-utensils mr-2"></i>Проживание + трёхразовое питание (завтрак, обед, ужин)</p>
+            <p class="text-2xl font-bold text-blue-600 mb-4">13 000 тенге</p>
+            <a href="#" class="inline-flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-50">
+              <i class="bi bi-bell mr-2"></i> Забронировать
+            </a>
+          </div>
+          <div class="w-full md:w-1/3">
+            <img src="https://via.placeholder.com/400x300?text=Стандартный+номер" class="w-full h-full object-cover" alt="Стандартный номер">
+          </div>
+        </div>
+
+        <!-- КАРТОЧКА 2 -->
+        <div class="card bg-white rounded-xl overflow-hidden flex flex-col md:flex-row">
+          <div class="w-full md:w-2/3 p-6">
+            <h5 class="text-xl font-bold text-gray-800 mb-2">ЛЮКС номер + питание</h5>
+            <p class="text-gray-600 mb-1"><i class="bi bi-utensils mr-2"></i>Проживание + трёхразовое питание (завтрак, обед, ужин)</p>
+            <p class="text-2xl font-bold text-blue-600 mb-4">15 000 тенге</p>
+            <a href="#" class="inline-flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-50">
+              <i class="bi bi-bell mr-2"></i> Забронировать
+            </a>
+          </div>
+          <div class="w-full md:w-1/3">
+            <img src="https://via.placeholder.com/400x300?text=Люкс+номер" class="w-full h-full object-cover" alt="Люкс номер">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Simple carousel functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const carousel = document.querySelector('.carousel-inner');
+      const items = document.querySelectorAll('.carousel-item');
+      const prevBtn = document.querySelector('[aria-label="Previous"]');
+      const nextBtn = document.querySelector('[aria-label="Next"]');
+      let currentIndex = 0;
+      
+      function showItem(index) {
+        items.forEach((item, i) => {
+          item.classList.toggle('active', i === index);
+        });
+      }
+      
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function() {
+          currentIndex = (currentIndex - 1 + items.length) % items.length;
+          showItem(currentIndex);
+        });
+      }
+      
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function() {
+          currentIndex = (currentIndex + 1) % items.length;
+          showItem(currentIndex);
+        });
+      }
+      
+      // Initialize with first item active
+      showItem(0);
+    });
+  </script>
+</body>
+</html>
