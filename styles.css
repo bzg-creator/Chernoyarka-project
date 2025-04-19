@@ -1,155 +1,187 @@
-.circle-icon {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: #0d6efd;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  margin: 0 auto;
-}
-
-.info-text {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.nav-links {
-  margin-top: 40px;
-}
-
-.nav-links a {
-  margin: 5px;
-}
-
-.btn {
-  transition: all 0.3s ease-in-out;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-}
-
-/* Центральный текст */
-.central-text {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Изображения */
-.img-house1 {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-
-.img-grill {
-  width: 150px;
-  transform: rotate(350deg);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-  margin-top: -50px;
-  margin-left: 50px;
-}
-
-.images-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.central-section {
-  min-height: 500px;
-  display: flex;
-  align-items: center;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-  .central-text {
-    left: 0;
-    transform: none;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  .images-container {
-    align-items: center;
-  }
-
-  .img-house1 {
+.hero-grid-horizontal {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 100vh;
     width: 100%;
-    max-width: 100%;
-    margin-right: 30px;
-  }
-
-  .img-grill {
-    width: 120px;
-    margin-left: 30px;
-  }
-}
-/* Голубой фон для продолжения страницы */
-.bg-lightblue {
-  background-color: #d0e7f9; /* Голубой цвет */
-}
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
 }
 
-.card {
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.hero-item {
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
-/* styles.css */
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    z-index: 10;
 }
-
-.circle-icon {
-  width: 80px;
-  height: 80px;
-  background-color: #0d6efd;
-  color: white;
-  border-radius: 50%;
-  font-size: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 10px;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
 }
-
-.info-text {
-  font-size: 14px;
-  color: #333;
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    scroll-margin-top: 80px;
 }
-
-.nav-links a {
-  margin: 5px;
+.section-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
-
-.central-section {
-  background-color: #f8f9fa;
-  padding: 40px 20px;
-  border-radius: 20px;
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
 }
-
-.bg-lightblue {
-  background-color: #e6f2ff;
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
 }
-
-.card img {
-  object-fit: cover;
-  height: 200px;
+.image-gallery-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
 }
-
-.card .btn {
-  width: 100%;
+.gallery-item {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
-
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+.map-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.btn-primary {
+    background-color: #4F772D;
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #3a5a1f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+}
+.btn-outline:hover {
+    background-color: white;
+    color: #4F772D;
+}
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #4F772D;
+    transition: width 0.3s ease;
+}
+.nav-link:hover {
+    color: #4F772D;
+}
+.nav-link:hover:after {
+    width: 100%;
+}
+.active-nav:after {
+    width: 100%;
+}
+.active-nav {
+    color: #4F772D;
+    font-weight: 600;
+}
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.mobile-menu.open {
+    max-height: 500px;
+}
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #4F772D;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 99;
+}
+.back-to-top.visible {
+    opacity: 1;
+}
+.back-to-top:hover {
+    background-color: #3a5a1f;
+    transform: translateY(-3px);
+}
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media (max-width: 768px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+    .image-gallery {
+        grid-template-columns: 1fr;
+    }
+    .image-gallery-2 {
+        grid-template-columns: 1fr;
+    }
+}
